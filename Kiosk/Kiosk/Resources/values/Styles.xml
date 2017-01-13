@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+  
+  <!-- toolbar -->
+  <style name="MyTheme.Splash" parent ="Theme.AppCompat.Light.DarkActionBar">
+    <item name="android:windowBackground">@drawable/Splash</item>
+   <!-- <item name="android:windowNoTitle">true</item>
+    <item name="windowNoTitle">true</item>
+    <item name="windowActionBar">false</item>
+    <item name="android:windowFullscreen">true</item>
+    <item name="android:windowContentOverlay">@null</item>
+    <item name="android:statusBarColor">@color/yellow</item>
+    <item name="windowActionBar">false</item>
+    <item name="windowNoTitle">true</item>-->
+  </style>
+</resources>

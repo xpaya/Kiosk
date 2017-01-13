@@ -1,10 +1,12 @@
 ﻿using Android.App;
+using Android.Content;
 using Android.Widget;
 using Android.OS;
+using Kiosk.Activities;
 
 namespace Kiosk
 {
-    [Activity(Label = "Kiosk", MainLauncher = true, Icon = "@drawable/icon")]
+    [Activity(Label = "Kiosk", MainLauncher = true, Icon = "@drawable/icon", Theme = "@style/MyTheme.Splash")]
     public class MainActivity : Activity
     {
         protected override void OnCreate(Bundle bundle)
@@ -12,7 +14,8 @@ namespace Kiosk
             base.OnCreate(bundle);
 
             // Set our view from the "main" layout resource
-            // SetContentView (Resource.Layout.Main);
+            Intent inMenu = new Intent(this, typeof(MenuActivity));
+            StartActivity(inMenu);
         }
     }
 }
