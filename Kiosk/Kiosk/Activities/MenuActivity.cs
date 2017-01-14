@@ -20,7 +20,7 @@ namespace Kiosk.Activities
             base.OnCreate(savedInstanceState);
 
             SetContentView(Resource.Layout.MainView);
-       //     InitializeComponents();
+            InitializeComponents();
         }
 
         private void InitializeComponents()

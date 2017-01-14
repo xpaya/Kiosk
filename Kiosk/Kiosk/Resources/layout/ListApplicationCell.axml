@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/cellApp"
+    android:orientation="horizontal">
+    <CheckBox
+        android:id="@+id/chkSelected"
+        android:paddingLeft="10dp" 
+        android:layout_width="40dp"
+        android:layout_height="40dp"/>
+    <ImageView
+        android:id="@+id/Icon"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:paddingLeft="10dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true" />
+    <TextView
+        android:id="@+id/Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>
