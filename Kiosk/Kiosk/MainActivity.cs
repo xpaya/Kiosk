@@ -16,6 +16,7 @@ namespace Kiosk
             // Set our view from the "main" layout resource
             Intent inMenu = new Intent(this, typeof(MenuActivity));
             StartActivity(inMenu);
+            Finish();
         }
     }
 }

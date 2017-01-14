@@ -20,6 +20,22 @@ namespace Kiosk.Activities
             base.OnCreate(savedInstanceState);
 
             SetContentView(Resource.Layout.MainView);
+       //     InitializeComponents();
+        }
+
+        private void InitializeComponents()
+        {
+            Button btnConfig = this.FindViewById<Button>(Resource.Id.btnConfig);
+            if (btnConfig != null)
+            {
+                btnConfig.Click+=BtnConfigOnClick;
+            }
+        }
+
+        private void BtnConfigOnClick(object sender, EventArgs eventArgs)
+        {
+            Intent inApplicationListActivity = new Intent(this, typeof(ApplicationListActivity));
+            StartActivity(inApplicationListActivity);
         }
     }
 }
