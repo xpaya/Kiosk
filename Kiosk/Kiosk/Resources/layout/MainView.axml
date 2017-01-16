@@ -10,4 +10,23 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btnConfig" />
+    <GridLayout
+        android:id="@+id/DesktopContent"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:minWidth="25px"
+        android:columnCount="1"
+        android:rowCount="1"
+        android:background="@android:color/transparent"
+        android:minHeight="25px">
+        <android.support.v4.view.ViewPager
+            android:background="@android:color/transparent"
+            android:id="@+id/DeskTopViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:overScrollMode="never" />
+    </GridLayout>
 </LinearLayout>

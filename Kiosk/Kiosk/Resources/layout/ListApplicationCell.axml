@@ -8,9 +8,9 @@
     android:orientation="horizontal">
     <CheckBox
         android:id="@+id/chkSelected"
-        android:paddingLeft="10dp" 
+        android:paddingLeft="10dp"
         android:layout_width="40dp"
-        android:layout_height="40dp"/>
+        android:layout_height="40dp" />
     <ImageView
         android:id="@+id/Icon"
         android:layout_width="70dp"

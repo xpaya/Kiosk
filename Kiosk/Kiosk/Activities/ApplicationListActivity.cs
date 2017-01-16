@@ -40,7 +40,8 @@ namespace Kiosk.Activities
 
         public override void OnBackPressed()
         {
-            Global.AppInfoList = new List<AppInfo>(AppInfoSelected.Where(x=>x.Selected));
+           var data = new List<AppInfo>(AppInfoSelected.Where(x=>x.Selected));
+            Global.AppInfoList = data;
             base.OnBackPressed();
         }
     }

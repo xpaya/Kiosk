@@ -1,14 +1,17 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Android.App;
 using Android.Provider;
 using Android.Views;
 using Android.Widget;
 using Kiosk.Model;
+using Kiosk.ViewHolder;
 
 namespace Kiosk.Adapter
 {
     public class ListApplicationAdapter : BaseAdapter<AppInfoSelected>
     {
+        public event EventHandler<EventArgs> ElementChanged;
         Activity _context;
         List<AppInfoSelected> _list;
 
@@ -47,15 +50,24 @@ namespace Kiosk.Adapter
             if (view == null)
                 view = _context.LayoutInflater.Inflate(Resource.Layout.ListApplicationCell, parent, false);
 
-            AppInfoSelected item = this[position];
-            view.FindViewById<TextView>(Resource.Id.Title).Text = item.Name;
+            var viewHolder = view.Tag as AppListViewHolder;
 
-            var imageView = view.FindViewById<ImageView>(Resource.Id.Icon);
-            imageView.SetImageDrawable(item.Icon);
-            var chk  = view.FindViewById<CheckBox>(Resource.Id.chkSelected);
-            chk.Checked = item.Selected;
+            if (viewHolder == null)
+            {
+                viewHolder = new AppListViewHolder();
+                viewHolder.Initialize(view, position);
+                viewHolder.ElementChanged += ViewHolderOnElementChanged;
+                view.Tag = viewHolder;
+            }
 
+            var app = this[position];
+            viewHolder.Bind(app);
             return view;
+        }
+
+        private void ViewHolderOnElementChanged(object sender, EventHandler eventHandler)
+        {
+            ElementChanged?.Invoke(sender, null);
         }
 
         #endregion

@@ -1,0 +1,5 @@
+﻿<resources>
+  <dimen name="AppCardHeightSize">100dp</dimen>
+  <dimen name="AppCardWithtSize">100dp</dimen>
+  <dimen name="defaulttextviewsize">13dp</dimen>
+</resources>
